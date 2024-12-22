@@ -1,22 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Physics Courses (Classes 6-12)</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBSE Educational Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Physics Courses</h1>
-        <p>Select your class:</p>
-        <ul>
-            <li><a href="class6.html">Class 6</a></li>
-            <li><a href="class7.html">Class 7</a></li>
-            <li><a href="class8.html">Class 8</a></li>
-            <li><a href="class9.html">Class 9</a></li>
-            <li><a href="class10.html">Class 10</a></li>
-            <li><a href="class11.html">Class 11</a></li>
-            <li><a href="class12.html">Class 12</a></li>
-        </ul>
-    </div>
+    <header>
+        <h1>CBSE Learning Hub</h1>
+    </header>
+    <main class="container">
+        <div class="subject-grid">
+            <div class="subject">
+                <h2>Physics</h2>
+                <select id="physics-class">
+                    <option value="">Select Class</option>
+                    <option value="phy-8.html">Class 8</option>
+                    <option value="phy-9.html">Class 9</option>
+                    <option value="phy-10.html">Class 10</option>
+                    <option value="phy-11.html">Class 11</option>
+                    <option value="phy-12.html">Class 12</option>
+                </select>
+            </div>
+            <div class="subject">
+                <h2>Mathematics</h2>
+                <select id="math-class">
+                    <option value="">Select Class</option>
+                    <option value="math-8.html">Class 8</option>
+                    <option value="math-9.html">Class 9</option>
+                    <option value="math-10.html">Class 10</option>
+                    <option value="math-11.html">Class 11</option>
+                    <option value="math-12.html">Class 12</option>
+                </select>
+            </div>
+            <div class="subject">
+                <h2>Biology</h2>
+                <select id="bio-class">
+                    <option value="">Select Class</option>
+                    <option value="bio-8.html">Class 8</option>
+                    <option value="bio-9.html">Class 9</option>
+                    <option value="bio-10.html">Class 10</option>
+                    <option value="bio-11.html">Class 11</option>
+                    <option value="bio-12.html">Class 12</option>
+                </select>
+            </div>
+            <div class="subject">
+                <h2>Chemistry</h2>
+                <select id="chem-class">
+                    <option value="">Select Class</option>
+                    <option value="chem-8.html">Class 8</option>
+                    <option value="chem-9.html">Class 9</option>
+                    <option value="chem-10.html">Class 10</option>
+                    <option value="chem-11.html">Class 11</option>
+                    <option value="chem-12.html">Class 12</option>
+                </select>
+            </div>
+        </div>
+    </main>
+    <script>
+        const selects = document.querySelectorAll('select');
+        selects.forEach(select => {
+            select.addEventListener('change', function() {
+                if (this.value) {
+                    window.location.href = this.value;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
